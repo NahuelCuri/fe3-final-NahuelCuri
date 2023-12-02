@@ -12,12 +12,12 @@ const Form = () => {
     event.preventDefault();
     
     if (state.formUsername.length <= 5) {
-      dispatch({type: 'FORM_ERROR', payload: "El nombre de usuario debe tener más de 5 caracteres."});
+      dispatch({type: 'FORM_ERROR', payload: "Por favor verifique su información nuevamente"});
       return;
     }
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(state.formEmail)) {
-      dispatch({type: 'FORM_ERROR', payload: "Por favor, introduce un email válido."});
+      dispatch({type: 'FORM_ERROR', payload: "Por favor verifique su información nuevamente"});
       return;
     }
 
