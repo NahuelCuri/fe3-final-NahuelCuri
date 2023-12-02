@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
 code {
@@ -27,7 +30,6 @@ nav{
   display: flex;
   width: 80vw;
   justify-content: flex-start;
-  padding: 1rem;
 }
 
 a{
@@ -44,7 +46,7 @@ footer {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  
   position: relative;
   bottom: 0;
   width: 90%;
@@ -113,10 +115,7 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.dark{
-  background-color: #12121296;
-  color: white;
-}
+
 .dark > a {
   color: white;
 }

@@ -1,17 +1,24 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import MedicInfo from '../Components/MedicInfo';
+import { ContextGlobal } from "../Components/utils/global.context";
 
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Detail = () => {
- 
+  const {state } = useContext(ContextGlobal);
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
-
+  const detailh1 = {
+    margin: "0px",
+    padding: "30px"
+  }
   return (
     <>
-      <h1>Detail Dentist id </h1>
-      {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-      {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
+    <div className={state.theme}>
+        <h1 style={detailh1}>Detail Dentist id </h1>
+        <MedicInfo></MedicInfo>
+    </div>
+      
     </>
   )
 }

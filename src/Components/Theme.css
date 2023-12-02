@@ -1,0 +1,50 @@
+ 
+
+body, html {
+    height: 1000px;
+    margin: 0px;
+}
+
+.dark nav{
+    background-color: darkgrey;
+}
+.dark footer {
+    background-color: rgb(100, 97, 97);
+    border: 2px solid black;
+} 
+.light {
+    background-color: white;
+    color: 'black';
+}
+.dark {
+    background-color: #454444;
+    color:white;
+}
+
+.light button{
+    background-color: rgb(92, 92, 244);
+    color: white;
+}
+.light  input[type="submit"] {
+    background-color: rgb(92, 92, 244);
+    color: white;
+  }
+.dark  input[type="submit"] {
+    background-color: rgb(93, 92, 92);
+    color: white;
+}
+
+.dark li {
+    color: white;
+} 
+.dark button{
+    background-color: rgb(93, 92, 92);
+    color: white;
+} 
+
+.dark .form button{
+    background-color: rgb(93, 92, 92);
+    color: white;
+}
+
+

@@ -1,0 +1,55 @@
+.NavImgLeftSide {
+  width: 100px;
+  height: 100px;
+  margin-top: 0.3%;
+  margin-left: 1%;
+}
+
+.NavImgLeftSide img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.NavList {
+  display: flex;
+  align-items: center;
+}
+
+.NavList ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.NavList li {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.liCursor{
+  cursor: pointer;
+}
+
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  width: 100%;
+  
+}
+
+.NavList button {
+  margin-left: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #00a0ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 20px;
+}

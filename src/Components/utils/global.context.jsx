@@ -1,14 +1,30 @@
-import { createContext } from "react";
+import { createContext, useEffect, useReducer } from "react";
+import { reducer } from "../reducer/reducer";
 
-export const initialState = {theme: "", data: []}
 
-export const ContextGlobal = createContext(undefined);
+export const initialState = {
+theme: "light", 
+data: [], 
+favs: JSON.parse(localStorage.getItem('favs')) || [], 
+medicInfo: {}, 
+formUsername: " ", 
+formEmail: " ",
+error: " "
+}
+
+export const ContextGlobal = createContext(initialState);
 
 export const ContextProvider = ({ children }) => {
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+
+  useEffect(() => {
+    localStorage.setItem('favs', JSON.stringify(state.favs));
+  }, [state.favs]);
+ 
 
   return (
-    <ContextGlobal.Provider value={{}}>
+    <ContextGlobal.Provider value={{state, dispatch}}>
       {children}
     </ContextGlobal.Provider>
   );
